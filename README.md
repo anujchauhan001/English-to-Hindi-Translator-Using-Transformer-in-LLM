@@ -22,5 +22,25 @@ Prerequisites
 Python 3.x
 Docker (for containerization)
 Hadoop (for distributed processing)
+
+
+# Docker and Hadoop Integration
+Docker
+Docker simplifies the deployment of this project by creating a standardized environment for all dependencies, ensuring the model runs seamlessly across different platforms. With Docker, you can containerize the entire translation service, making it easy to share, deploy, and scale. By using Docker containers, the model can be deployed on different machines or in cloud environments, ensuring consistency and minimizing compatibility issues.
+
+To run the service in a Docker container:
+
+Build the Docker image with the provided Dockerfile.
+Run the container with a simple command.
+The service becomes accessible via the defined port, allowing the translation model to handle requests.
+Hadoop
+Training a machine translation model requires large parallel corpora (text in both source and target languages). Hadoop is used in this project for distributed data processing. It allows for the handling of massive datasets, breaking down the data into smaller chunks and processing them in parallel across multiple nodes.
+
+Hadoop’s MapReduce framework is used to pre-process, clean, and tokenize the text data efficiently, speeding up the training phase. This is especially useful when working with large datasets like the English-Hindi parallel corpus.
+
+Results and Impact
+The English to Hindi translation model achieves high accuracy due to the self-attention mechanism of the Transformer model. The real-time translation service can be integrated into various applications such as chatbots, customer support systems, or language learning platforms.
+
+By containerizing the project with Docker and using Hadoop for distributed data processing, the solution can scale to handle large datasets, making it ideal for deployment in cloud-based environments or large-scale production systems.
 TensorFlow (for model training and inference)
 NLTK/spaCy (for tokenization and text preprocessing)
